@@ -1,7 +1,5 @@
     function FizzBuzz() {
-        // disable auto rendering
-        $this->autoRender = false;
-
+    
         // loop to iterate through +ve integers 1-100
         for($i=1; $i<=100 ; $i++) {
 
