@@ -1,3 +1,4 @@
+<?php    
     function fibonacciSequence($n) {
         $penultimate    = 0;
         $previous       = 1;
@@ -12,3 +13,4 @@
             echo $current . "\n";
         }
     }
+?>
