@@ -1,4 +1,5 @@
-    function FizzBuzz() {
+<?php    
+    function fizzBuzz() {
     
         // loop to iterate through +ve integers 1-100
         for($i=1; $i<=100 ; $i++) {
@@ -15,3 +16,4 @@
             }
         }
     }
+?>
