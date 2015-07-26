@@ -14,6 +14,8 @@ $set = array(23, 5, 4, 7, 2, 11);
 // hardcoded at present, come back and make this dynamic by taking it as input
 $target = 20;
 
+// power set to store all subsets; at each step we will roll up sets generated in the previous
+// set, finally powerSet[set[0]] will contain the powerSet. 
 $powerSet = array();
 
 /**
@@ -39,7 +41,7 @@ function generateTreeAtI($set, $i) {
  */
 function addIToAllElementsOfTreeAtIPlusOne($set, $i) {
 
-    // generated elements of for set at i to be added to the powerset
+    // generated elements for set at i to be added to the powerset
     global $powerSet;
 
     // result array to collect all subSets at i formed by adding i to all elements of subSet at i+1
@@ -72,9 +74,8 @@ generateTreeAtI($set, 0);
 // iterate through the powerSet to check all sets that sum to the integer T
 // the powerSet[0] will have all the (2^n - 1) sets
 foreach($powerSet[$set[0]] as $subSet) {
-
     // if array sum of $subSet equals to T, print as a consequtive sequence
-    if(array_sum($subSet) == $target){ // not sure if array_sum available, can implemenet though
+    if(array_sum($subSet) == $target){
         echo "Subset that adds upto the given target T = $target found: \n";
         print_r($subSet);
     }
