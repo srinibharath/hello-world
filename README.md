@@ -1,2 +1,9 @@
 # hello-world
-Just another repository
+
+Hello:
+
+This is my personal repository where I store my work online.
+
+Thanks for visiting!
+
+Bye.
