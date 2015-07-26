@@ -1,5 +1,4 @@
     function fibonacciSequence($n) {
-        $this->autoRender = false;
         $penultimate    = 0;
         $previous       = 1;
         
