@@ -1,3 +1,4 @@
+<?php    
     function consequtiveSequence($list = array(), $target = 0) {
         $list = array(1, 3, 5, 23, 2);
         $target = 7;
@@ -57,3 +58,4 @@
         return false;
         
     }
+?>
