@@ -68,16 +68,7 @@ function removeDuplicateCharacters($word) {
         return $word;
     }
 
-    // associative array which will maintain mapping of a char and number
-    // of times it occurs in the given word. 
-    $chars = array();
-    for($i=0; $i < $wordLength; $i++) {
-        if(isset($chars[$word{$i}])) {
-            $chars[$word{$i}] = $chars[$word{$i}]++;
-        } else {
-            $chars[$word{$i}] = 1;
-        }
-    }
+    $chars = __buildFrequencyMap($word);
 
     // PHP associative arrays do maintain the order of insertion.
     // So simply iterate and the unique chars found in the word.
@@ -93,7 +84,7 @@ function reverse($word) {
         // defensive
         return $word;
     }
-    
+
     // length of the given word
     $wordLength = strlen($word);
 
@@ -108,4 +99,23 @@ function reverse($word) {
     }
     return $wordReverse;
 }
+
+function __buildFrequencyMap($word = "") {
+    $chars = array();
+    if(empty($word)) {
+        return $chars;
+    }
+    $wordLength = strlen($word);
+    // associative array which will maintain mapping of a char and number
+    // of times it occurs in the given word. 
+    for($i=0; $i < $wordLength; $i++) {
+        if(isset($chars[$word{$i}])) {
+            $chars[$word{$i}] = $chars[$word{$i}]++;
+        } else {
+            $chars[$word{$i}] = 1;
+        }
+    }
+    return $chars;
+}
+
 ?>
