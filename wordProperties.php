@@ -93,7 +93,7 @@ function reverse($word) {
         // defensive
         return $word;
     }
-
+    
     // length of the given word
     $wordLength = strlen($word);
 
